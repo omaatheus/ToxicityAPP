@@ -4,7 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      {/* Aqui no App.Js só vamos chamar a função das rotas, 
+      o app todo será feito dentro da pasta src */}
+      <Text>Hello World</Text>
       <StatusBar style="auto" />
     </View>
   );
