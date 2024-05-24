@@ -7,12 +7,12 @@ const Stack = createStackNavigator()
 
 export default function RouteStack() {
   return (
-    
+
       <NavigationContainer>
 
         <Stack.Navigator 
         screenOptions={{headerShown: false}} 
-        initialRouteName='Posts'> 
+        initialRouteName='PageBan'> 
 
           <Stack.Screen name='PageBan' component={PageBan} />
           <Stack.Screen name='Posts' component={Posts} />

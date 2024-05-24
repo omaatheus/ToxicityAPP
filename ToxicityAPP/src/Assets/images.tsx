@@ -1,0 +1,1 @@
+export const bagre = require('../Assets/bagre.jpg');
