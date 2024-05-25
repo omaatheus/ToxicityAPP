@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View, FlatList } from 'react-native';
 import { styles } from '../../Constants/styles/Posts';
+import { noPostsMessage } from '../../Components/noPosts';
 
 const posts = [];
 
@@ -22,9 +23,21 @@ export default function Posts() {
         />
       ) : (
         
-        <Text style={styles.noPostsText}>nothing here yet</Text>
+        <View>
+             <Text style={styles.emoji}>
+                😢
+            </Text>
+            <Text style={styles.noPostsText}>
+                nothing here yet
+            </Text> 
+        </View>
         
       )}
+
+      <View style={styles.containerForm}>
+        
+      </View>
+
     </View>
   );
 };

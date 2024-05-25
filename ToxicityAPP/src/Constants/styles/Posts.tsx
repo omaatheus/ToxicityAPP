@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#fff',
   },
+  containerForm: {
+    
+  },
   postContainer: {
     padding: 16,
     marginVertical: 8,
