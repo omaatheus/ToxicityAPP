@@ -1,1 +1,1 @@
-export const bagre = require('./bagre.png');
+export const bagre = require('../Assets/bagre.jpg');
