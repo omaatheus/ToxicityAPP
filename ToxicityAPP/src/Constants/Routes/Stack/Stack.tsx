@@ -12,7 +12,7 @@ export default function RouteStack() {
 
         <Stack.Navigator 
         screenOptions={{headerShown: false}} 
-        initialRouteName='PageBan'> 
+        initialRouteName='Posts'> 
 
           <Stack.Screen name='PageBan' component={PageBan} />
           <Stack.Screen name='Posts' component={Posts} />

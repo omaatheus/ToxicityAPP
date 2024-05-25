@@ -3,27 +3,42 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#270343',
       alignItems: 'center',
       justifyContent: 'center',
     },
     warnContainer: {
-      width: 300,
-      height: 300,
-      backgroundColor: '#ffcc00',
+      width: '100%',
+      height: 400,
+      backgroundColor: '#210A34',
       alignItems: 'center',
-      justifyContent: 'center',
+      
+      borderRadius: 40,
     },
     userImage: {
         borderRadius: 50,
     },
     user: {
-        width: 150,
+        color: '#fff',
+        marginTop: 40,
+        marginLeft: -100,
+        fontSize: 25,
+        fontWeight: '200',
     },
+
     warnBan: {
-        width: 120,
+        color: '#fff',
+        fontWeight: '100',
+        fontSize: 25,
+        marginTop: 40,
+        marginLeft: -150,
+        letterSpacing: 0.25,
     },
+
     becauseBan: {
-        width: 120,
+        color: '#A00000',
+        fontSize: 20,
+        fontWeight: '300',
+        marginTop: 140,
     },
   });
