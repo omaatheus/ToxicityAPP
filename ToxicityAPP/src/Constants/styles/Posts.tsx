@@ -64,8 +64,8 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 40,
     paddingHorizontal: 8,
-    marginBottom: 50, // Movido mais para baixo
-    marginTop: 30, // Movido para cima 
+    marginBottom: 30, // Movido mais para baixo
+    marginTop: 20, // Movido para cima 
     backgroundColor: 'transparent', // Fundo transparente
     color: '#fff', // Texto branco para melhor contraste
     borderWidth: 0, // Remover a borda
