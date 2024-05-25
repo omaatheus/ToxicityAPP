@@ -3,11 +3,18 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#4B0082', // Fundo roxo escuro
   },
   containerForm: {
-    
+    padding: 50, // Mais espaçoso
+    backgroundColor: '#270343', // Fundo roxo
+    borderTopLeftRadius: 45, // Bordas superiores arredondadas
+    borderTopRightRadius: 45,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: '30%', // Ocupa metade da tela na parte inferior
   },
   postContainer: {
     padding: 16,
@@ -28,14 +35,54 @@ export const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-  emoji:{
-
+  username: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'white',
   },
 
+  userImage: {
+    width: 40,
+    height: 40,
+    borderRadius: 20, // Torna a imagem circular
+  },
+
+  emoji: {
+    fontSize: 50,
+    textAlign: 'center',
+    marginVertical: 20,
+  },
   noPostsText: {
     fontSize: 18,
-    color: '#999',
+    color: 'white',
     textAlign: 'center',
-    marginTop: 20,
+    marginTop: -15,
+    height: 300,
+  },
+  
+  input: {
+    width: '100%',
+    height: 40,
+    paddingHorizontal: 8,
+    marginBottom: 50, // Movido mais para baixo
+    marginTop: 30, // Movido para cima 
+    backgroundColor: 'transparent', // Fundo transparente
+    color: '#fff', // Texto branco para melhor contraste
+    borderWidth: 0, // Remover a borda
+    textAlignVertical: 'bottom',//alinha o texto para parte inferior 
+  },
+
+  button: {
+    height: 40, // Menor altura
+    backgroundColor: '#b53337', // Cor rosada
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 150, // Arredondar o botão
+    marginBottom: 90, // Adiciona espaço inferior
+  },
+  
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
