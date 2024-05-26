@@ -36,8 +36,7 @@ export const styles = StyleSheet.create({
   },
 
   username: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 19,
     color: 'white',
   },
 
@@ -63,6 +62,7 @@ export const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 40,
+    fontSize: 20,
     paddingHorizontal: 8,
     marginBottom: 30, // Movido mais para baixo
     marginTop: 20, // Movido para cima 
@@ -83,6 +83,6 @@ export const styles = StyleSheet.create({
   
   buttonText: {
     color: 'white',
-    fontWeight: 'bold',
+    fontSize: 22,
   },
 });
