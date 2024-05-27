@@ -16,28 +16,40 @@ export const styles = StyleSheet.create({
     right: 0,
     height: '30%', // Ocupa metade da tela na parte inferior
   },
+  image: {
+    width: 200,
+    height: 200,
+  },
+
   postContainer: {
-    padding: 16,
+    margin: 20,
+    padding: 60,
     marginVertical: 8,
-    backgroundColor: '#f9f9f9',
-    borderRadius: 8,
+    backgroundColor: '#270343',
+    borderRadius: 20,
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 2,
   },
   postTitle: {
+    marginBottom: 17,
+    marginLeft: 20,
     fontSize: 18,
     fontWeight: 'bold',
+    color:'white',
   },
   postContent: {
-    fontSize: 14,
+    marginLeft: -20,
+    fontSize: 17,
     marginTop: 4,
+    color:'white',
   },
 
   username: {
     fontSize: 19,
     color: 'white',
+    marginLeft: 45,
   },
 
   userImage: {
