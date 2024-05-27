@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View, FlatList, TextInput, TouchableOpacity, Alert, } from 'react-native';
+import { Text, View, FlatList, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useState } from 'react';
 import { styles } from '../../Constants/styles/Posts';
 
