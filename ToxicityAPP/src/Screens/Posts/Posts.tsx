@@ -4,21 +4,50 @@ import { Text, View, FlatList, TextInput, TouchableOpacity, Alert, Image } from 
 import { useState } from 'react';
 import { styles } from '../../Constants/styles/Posts';
 import { bagre } from '../../Assets/images';
+import TextBan from '../../Components/text';
+// import { useNavigation } from '@react-navigation/native';
+// import { toxicityClassifier } from '../../Lib/Toxicity/Toxicity';
 
 interface Post {
   id: number;
   content: string;
 }
 
-export function Posts() {
+export function Posts({ onPostBanned }: { onPostBanned: (postContent: string) => void }
+) {
+ // const navigation = useNavigation()
   const [posts, setPosts] = useState<Post[]>([
     
   ]);
   const [message, setMessage] = useState('');
 
+  
+
+  // const publicar = async () => {
+  //   if (message.trim() === '') {
+  //     Alert.alert('Postagem Vazia', 'Por favor, insira algum texto antes de publicar.');
+  //     return; 
+  //   }
+  
+  //   const isToxic = await toxicityClassifier(message);
+  
+  //   if (isToxic) {
+  //     navigation.navigate('PageBan')
+  //   } else {
+  //     const novoPost: Post = {
+  //       id: posts.length > 0 ? Math.max(...posts.map(post => post.id)) + 1 : 1,
+  //       content: message,
+  //     };
+  
+  //     setPosts([novoPost, ...posts]);
+  //     setMessage('');
+  //     console.log('Novo Post Criado', novoPost);
+  //   }
+  // };
+  
   const publicar = () => {
     if (message.trim() === '') {
-      Alert.alert('Postagem Vazia', 'Por favor, insira algum texto antes de publicar.');
+      Alert.alert('Postagem Vazia', 'Por favor, insira algum texto antes de postar.');
       return; 
     }
 
@@ -32,6 +61,8 @@ export function Posts() {
 
     // console log do post
     console.log('Novo Post Criado', novoPost); 
+    
+    onPostBanned(novoPost.content)
   };
 
   const renderizarPost = ({ item }: { item: Post }) => (

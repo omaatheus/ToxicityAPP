@@ -1,13 +1,22 @@
-require('@tensorflow/tfjs');
-const toxicity = require('@tensorflow-models/toxicity');
+import * as toxicity from '@tensorflow-models/toxicity'
 
+export const toxicityClassifier = (message) => {
 // The minimum prediction confidence.
 const threshold = 0.9;
+const toxicityLabels = [
+  "identity_attack",
+  "insult",
+  "obscene",
+  "severe_toxicity",
+  "sexual_explicit",
+  "threat",
+  "toxicity",
+];
 
 // Load the model. Users optionally pass in a threshold and an array of
 // labels to include.
-toxicity.load(threshold).then(model => {
-  const sentences = ['you suck'];
+toxicity.load(threshold, toxicityLabels).then(model => {
+  const sentences = [message];
 
   model.classify(sentences).then(predictions => {
     // `predictions` is an array of objects, one for each prediction head,
@@ -36,3 +45,4 @@ toxicity.load(threshold).then(model => {
      */
   });
 });
+};
