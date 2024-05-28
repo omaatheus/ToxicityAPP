@@ -5,8 +5,6 @@ import { useState } from 'react';
 import { styles } from '../../Constants/styles/Posts';
 import { bagre } from '../../Assets/images';
 
-
-
 interface Post {
   id: number;
   content: string;
@@ -69,7 +67,7 @@ export function Posts() {
           <View style={styles.imageContainer}> 
             <Image source={bagre} style={styles.userImage} /> 
           </View> 
-          <Text style={styles.username}> @bagre</Text>
+          <Text style={styles.username}>@bagre</Text>
         </Text>
 
         <TextInput
