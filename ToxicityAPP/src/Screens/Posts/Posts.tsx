@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View, FlatList, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { Text, View, FlatList, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
 import { useState } from 'react';
 import { styles } from '../../Constants/styles/Posts';
+import { bagre } from '../../Assets/images';
 
 
 
@@ -37,7 +38,11 @@ export function Posts() {
 
   const renderizarPost = ({ item }: { item: Post }) => (
     <View style={styles.postContainer}>
-      <Text style={styles.postTitle}>@bagre</Text>
+      <Text style={styles.postTitle}> 
+        <View style={styles.imageContainer}> 
+          <Image source={bagre} style={styles.userImage} />
+        </View> @bagre
+      </Text>
       <Text style={styles.postContent}>{item.content}</Text>
     </View>
   );
@@ -60,8 +65,13 @@ export function Posts() {
       )}
 
       <View style={styles.containerForm}>
-    
-        <Text style={styles.username}>@bagre</Text>
+        <Text style={styles.postTitle}> 
+          <View style={styles.imageContainer}> 
+            <Image source={bagre} style={styles.userImage} /> 
+          </View> 
+          <Text style={styles.username}> @bagre</Text>
+        </Text>
+
         <TextInput
           style={styles.input}
           value={message}

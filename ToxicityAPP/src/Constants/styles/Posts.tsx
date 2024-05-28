@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
     backgroundColor: '#4B0082', // Fundo roxo escuro
   },
   containerForm: {
@@ -33,11 +34,12 @@ export const styles = StyleSheet.create({
     elevation: 2,
   },
   postTitle: {
-    marginBottom: 17,
-    marginLeft: 20,
+    marginBottom: 4,
+    // marginLeft: 20,
     fontSize: 18,
     fontWeight: 'bold',
     color:'white',
+    
   },
   postContent: {
     marginLeft: -20,
@@ -49,14 +51,21 @@ export const styles = StyleSheet.create({
   username: {
     fontSize: 19,
     color: 'white',
-    marginLeft: 45,
+  },
+
+  imageContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    overflow: 'hidden',
   },
 
   userImage: {
     width: 40,
     height: 40,
     borderRadius: 20, // Torna a imagem circular
-  },
+
+  },  
 
   emoji: {
     fontSize: 50,
